@@ -1,4 +1,4 @@
-package com.example.tarjetascarrousel.cardCarrousel.models
+package com.example.tarjetascarrousel.cardCarrousel.domain.models
 
 class Transaction (
     val date: String,
