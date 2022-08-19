@@ -1,4 +1,4 @@
-package com.example.tarjetascarrousel.cardCarrousel.Base
+package com.example.tarjetascarrousel.cardCarrousel.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
