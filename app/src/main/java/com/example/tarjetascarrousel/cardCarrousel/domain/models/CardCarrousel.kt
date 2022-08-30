@@ -5,10 +5,10 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class CardCarrousel(
-    val BankLogo : String,
-    val BankName: String,
-    val CardNumber: String,
-    val CardExpiration: String,
-    val CardFranchise: String,
-    val CardBackground: String,
+    val bankLogo : String,
+    val bankName: String,
+    val cardNumber: String,
+    val cardExpiration: String,
+    val cardFranchise: String,
+    val cardBackground: String,
 ) : Parcelable

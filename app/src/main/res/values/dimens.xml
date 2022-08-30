@@ -12,4 +12,40 @@
     <dimen name="cardCarrouselWidth">200dp</dimen>
     <dimen name="cardCarrouselHeight">200dp</dimen>
     <dimen name="cardCornerRadius">44dp</dimen>
+
+    <!-- Margin & Padding, 8 dp baseline, https://material.io/design/layout/understanding-layout.html -->
+    <dimen name="margin_padding_size_xxxs">2dp</dimen>
+    <dimen name="margin_padding_size_xxs">4dp</dimen>
+    <dimen name="margin_padding_size_xs">6dp</dimen>
+    <dimen name="margin_padding_size_small">8dp</dimen>
+    <dimen name="margin_padding_size_medium_small">12dp</dimen>
+    <dimen name="margin_padding_size_medium">16dp</dimen>
+    <dimen name="margin_padding_size_medium_large">20dp</dimen>
+    <dimen name="margin_padding_size_large">24dp</dimen>
+    <dimen name="margin_padding_size_xlarge">32dp</dimen>
+    <dimen name="margin_padding_size_xxlarge">40dp</dimen>
+    <dimen name="margin_padding_size_xxxlarge">44dp</dimen>
+    <dimen name="margin_padding_size_xxxxlarge">56dp</dimen>
+    <!-- Touch Target Size, https://material.io/design/usability/accessibility.html#layout-and-typography -->
+    <dimen name="standard_touch_size_xxsmall">6dp</dimen>
+    <dimen name="standard_touch_size_xsmall">8dp</dimen>
+    <dimen name="standard_touch_size_small">16dp</dimen>
+    <dimen name="standard_touch_size_xxmedium">46dp</dimen>
+    <dimen name="standard_touch_size_xmedium">48dp</dimen>
+    <dimen name="standard_touch_size_medium">52dp</dimen>
+    <dimen name="standard_touch_size_large">56dp</dimen>
+    <dimen name="standard_touch_size_xlarge">64dp</dimen>
+    <dimen name="standard_touch_size_max">132dp</dimen>
+    <!-- Font sizes, https://material.io/design/typography/the-type-system.html#type-scale -->
+    <dimen name="text_size_micro">12sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_medium_lage">18sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_xlarge">34sp</dimen>
+    <dimen name="text_size_xxlarge">45sp</dimen>
+    <dimen name="text_size_xxxlarge">56sp</dimen>
+    <!-- Line spacing -->
+    <dimen name="small_stroke">1dp</dimen>
+    <dimen name="view_elevation">5dp</dimen>
 </resources>

@@ -3,11 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/cardCarrouselFragment">
-
+    app:startDestination="@id/cardCarrouselFragment2">
     <fragment
-        android:id="@+id/cardCarrouselFragment"
+        android:id="@+id/cardCarrouselFragment2"
         android:name="com.example.tarjetascarrousel.cardCarrousel.presentation.cardCarrousel.CardCarrouselFragment"
-        android:label="CardCarrouselFragment"
-        tools:layout="@layout/fragment_card_carrousel"/>
+        android:label="fragment_card_carrousel"
+        tools:layout="@layout/fragment_card_carrousel" />
 </navigation>

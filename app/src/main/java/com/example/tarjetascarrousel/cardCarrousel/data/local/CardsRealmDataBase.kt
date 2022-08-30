@@ -1,16 +1,18 @@
-package com.example.tarjetascarrousel.cardCarrousel.data.Local
+package com.example.tarjetascarrousel.cardCarrousel.data.local
 
 import android.content.Context
-import android.support.v4.os.IResultReceiver
-import com.example.tarjetascarrousel.cardCarrousel.data.Interfaces.IRealmDataBase
+import com.example.tarjetascarrousel.cardCarrousel.data.interfaces.IRealmDataBase
 import dagger.hilt.android.qualifiers.ApplicationContext
-import io.realm.*
+import io.realm.Realm
+import io.realm.RealmModel
+import io.realm.RealmObject
+import io.realm.RealmResults
 import javax.inject.Inject
 
-class BizumDataBaseRealm @Inject constructor(@ApplicationContext private val context: Context) :
+class CardsRealmDataBase @Inject constructor(@ApplicationContext private val context: Context) :
     IRealmDataBase {
 
-    private val realmConfiguration by lazy { realmConfiguration(context) }
+    private val realmConfiguration by lazy { CardsRealmModule.realmConfiguration(context) }
     private fun getRealm(): Realm {
         return try {
             Realm.getInstance(realmConfiguration)
@@ -19,13 +21,16 @@ class BizumDataBaseRealm @Inject constructor(@ApplicationContext private val con
             Realm.getInstance(realmConfiguration)
         }
     }
-    fun deleteAllData() {
+
+    private  fun deleteAllData() {
         val realm = getRealm()
         realm.beginTransaction()
         realm.deleteAll()
         realm.commitTransaction()
         realm.close()
     }
+
+
     override fun <O : RealmResults<I>, I : RealmModel> getObjectsFromRealm(action: Realm.() -> O): List<I> {
         val realm = getRealm()
         val results = action(realm)
@@ -75,12 +80,4 @@ class BizumDataBaseRealm @Inject constructor(@ApplicationContext private val con
             realm.cancelTransaction()
         }
     }
-}
-
-
-fun realmConfiguration(@ApplicationContext context: Context): RealmConfiguration {
-    Realm.init(context)
-    return RealmConfiguration.Builder()
-        .deleteRealmIfMigrationNeeded()
-        .build()
 }

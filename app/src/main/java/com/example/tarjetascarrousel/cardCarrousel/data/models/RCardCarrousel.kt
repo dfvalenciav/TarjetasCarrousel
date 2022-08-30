@@ -1,9 +1,9 @@
-package com.example.tarjetascarrousel.cardCarrousel.data.Local
+package com.example.tarjetascarrousel.cardCarrousel.data.models
 
 import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
 
-open class RCardCarrouselEntity(
+open class RCardCarrousel(
     var bankLogo : String = "",
     var bankName: String = "",
     var cardNumber: String = "",
