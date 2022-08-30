@@ -1,4 +1,4 @@
-package com.example.tarjetascarrousel.cardCarrousel.data.Interfaces
+package com.example.tarjetascarrousel.cardCarrousel.data.interfaces
 
 import io.realm.Realm
 import io.realm.RealmModel

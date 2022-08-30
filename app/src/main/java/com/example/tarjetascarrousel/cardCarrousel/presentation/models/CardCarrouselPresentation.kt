@@ -5,14 +5,14 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class CardCarrouselPresentation(
-    var BankLogo : String,
-    var BankName: String,
-    var CardNumber: String,
-    var CardExpiration: String,
-    var CardFranchise: String,
-    var CardBackground: String,
+    var bankLogo : String,
+    var bankName: String,
+    var cardNumber: String,
+    var cardExpiration: String,
+    var cardFranchise: String,
+    var cardBackground: String,
 ): Parcelable
 
 fun equals (oldItem : CardCarrouselPresentation, newItem: CardCarrouselPresentation) : Boolean =
-    oldItem.BankName == newItem.BankName && oldItem.BankLogo == newItem.BankLogo && oldItem.CardNumber == newItem.CardNumber
-            && oldItem.CardExpiration == newItem.CardExpiration  && oldItem.CardFranchise == newItem.CardFranchise
+    oldItem.bankName == newItem.bankName && oldItem.bankLogo == newItem.bankLogo && oldItem.cardNumber == newItem.cardNumber
+            && oldItem.cardExpiration == newItem.cardExpiration  && oldItem.cardFranchise == newItem.cardFranchise
