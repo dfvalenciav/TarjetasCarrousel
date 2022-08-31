@@ -16,8 +16,7 @@ class CardCarrouselViewModel @Inject constructor(
             {
                 getCardCarrouselUseCase.execute()
             },
-            {
-                    getCardCarrouselUseCase ->
+            { getCardCarrouselUseCase ->
                 getCardCarrouselUseCase.toListCardCarrouselPresentation()
                     .also {
                             presentationCardListCarrousel ->

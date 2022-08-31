@@ -2,14 +2,12 @@ package com.example.tarjetascarrousel.cardCarrousel.presentation.cardCarrousel
 
 import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.constraintlayout.helper.widget.Carousel
 import androidx.fragment.app.viewModels
 import com.example.daval.cleanrecyclerview.Utils.Utils
-import com.example.tarjetascarrousel.R
 import com.example.tarjetascarrousel.cardCarrousel.base.BaseFragment
 import com.example.tarjetascarrousel.cardCarrousel.presentation.models.CardCarrouselPresentation
 import com.example.tarjetascarrousel.databinding.FragmentCardCarrouselBinding
@@ -52,6 +50,7 @@ class CardCarrouselFragment :  BaseFragment<FragmentCardCarrouselBinding, CardCa
                     itemsCarrousel = event.ls_carrousel
                     setupCarousel()
                 }
+                else -> {}
             }
         }
     }

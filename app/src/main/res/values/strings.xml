@@ -12,4 +12,9 @@
     <string name="cardListHome_itemDescription">Movimientos de la tarjeta</string>
     <string name="cardListHome_itemPrototypeNumber">123456 ***** 8767</string>
     <string name="cardListHome_itemPrototypeExpiration">Válido hasta 09/22</string>
+
+    <!---Card list carrousel-->
+    <string name="cardlist_carrousel_title">Tarjetas</string>
+    <string name="cardlist_carrousel">tarjetas carrousel</string>
+    <string name="cardlist_carrousel_default_bankname">SMM</string>
 </resources>

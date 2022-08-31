@@ -8,7 +8,6 @@ import javax.inject.Inject
 class GetCardCarrouselUseCase @Inject constructor(
     private val repository: ICardRealmRepository
 ) : BaseUseCase<CardCarrousel>(){
-
     override suspend fun execute(): List<CardCarrousel> {
         return repository.getCardListCarrouselObjects()
     }

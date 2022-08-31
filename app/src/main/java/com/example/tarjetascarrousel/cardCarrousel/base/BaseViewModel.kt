@@ -11,6 +11,7 @@ abstract class BaseViewModel<T>: ViewModel() {
 
     protected val _event by lazy { MutableLiveData<T>() }
     val event: LiveData<T> = _event
+
     protected val tag = this::class.java.name
     fun <T> executeUseCase(
         useCase: suspend () -> T,

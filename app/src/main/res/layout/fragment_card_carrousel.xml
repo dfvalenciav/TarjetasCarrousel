@@ -4,20 +4,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".cardCarrousel.presentation.cardCarrousel.CardCarrouselFragment">
+    tools:context=".cardCarrousel.presentation.cardCarrousel.CardCarrouselFragment"
+    android:background="@color/Primario_01_SMM_Purple">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/cardlist_carrousel_title"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
 
     <androidx.constraintlayout.motion.widget.MotionLayout
-        android:id="@+id/motionLayout"
+        android:id="@+id/motion_layout"
         android:layout_width="match_parent"
         android:layout_height="181dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="27dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
         android:visibility="visible"
         app:layoutDescription="@xml/fragment_card_carrousel_scene"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         app:motionDebug="SHOW_PATH">
 
         <androidx.constraintlayout.widget.Guideline
@@ -39,7 +54,6 @@
             android:layout_width="@dimen/cardCarrouselWidth"
             android:layout_height="@dimen/cardCarrouselHeight"
             android:layout_marginEnd="16dp"
-            android:scaleType="centerCrop"
             app:cardBackgroundColor="@color/cardview_shadow_start_color"
             app:cardCornerRadius="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -58,8 +72,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
-                    android:lineSpacingExtra="8sp"
-                    android:lineSpacingMultiplier="1"
                     android:text="@string/cardListHome_itemPrototypeNumber"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -81,12 +93,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="30dp"
                     android:layout_marginBottom="30dp"
-                    android:scaleType="center"
                     android:scaleX="1.5"
                     android:scaleY="1.5"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:srcCompat="@drawable/ic_mastercard_vector" />
+                    app:srcCompat="@drawable/ic_mastercard_vector"
+                    android:contentDescription="@string/cardlist_carrousel" />
 
                 <ImageView
                     android:id="@+id/imageView6Invisible"
@@ -97,7 +109,8 @@
                     android:scaleY="1.5"
                     app:layout_constraintBottom_toTopOf="@+id/imageView5Invisible"
                     app:layout_constraintStart_toStartOf="@+id/imageView5Invisible"
-                    app:srcCompat="@drawable/ic_contactless_white" />
+                    app:srcCompat="@drawable/ic_contactless_white"
+                    android:contentDescription="@string/cardlist_carrousel" />
 
                 <ImageView
                     android:id="@+id/imageView7Invisible"
@@ -107,13 +120,14 @@
                     android:scaleY="0.8"
                     app:layout_constraintStart_toStartOf="@+id/cardHomePrototypeNumberInvisible"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_favicon_copy_4_white" />
+                    app:srcCompat="@drawable/ic_favicon_copy_4_white"
+                    android:contentDescription="@string/cardlist_carrousel"/>
 
                 <TextView
                     android:id="@+id/textView20Invisible"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SMM"
+                    android:text="@string/cardlist_carrousel_default_bankname"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView7Invisible"
                     app:layout_constraintStart_toEndOf="@+id/imageView7Invisible"
@@ -126,7 +140,6 @@
             android:layout_width="@dimen/cardCarrouselWidth"
             android:layout_height="@dimen/cardCarrouselHeight"
             android:layout_marginEnd="16dp"
-            android:scaleType="centerCrop"
             app:cardBackgroundColor="@color/design_default_color_primary_dark"
             app:cardCornerRadius="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -144,8 +157,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
-                    android:lineSpacingExtra="8sp"
-                    android:lineSpacingMultiplier="1"
                     android:text="@string/cardListHome_itemPrototypeNumber"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -167,12 +178,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="30dp"
                     android:layout_marginBottom="30dp"
-                    android:scaleType="center"
                     android:scaleX="1.5"
                     android:scaleY="1.5"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:srcCompat="@drawable/ic_mastercard_vector" />
+                    app:srcCompat="@drawable/ic_mastercard_vector"
+                    android:contentDescription="@string/cardlist_carrousel"/>
 
                 <ImageView
                     android:id="@+id/imageView6One"
@@ -183,7 +194,8 @@
                     android:scaleY="1.5"
                     app:layout_constraintBottom_toTopOf="@+id/imageViewFranchise1"
                     app:layout_constraintStart_toStartOf="@+id/imageViewFranchise1"
-                    app:srcCompat="@drawable/ic_contactless_white" />
+                    app:srcCompat="@drawable/ic_contactless_white"
+                    android:contentDescription="@string/cardlist_carrousel"/>
 
                 <ImageView
                     android:id="@+id/imageView7One"
@@ -193,13 +205,14 @@
                     android:scaleY="0.8"
                     app:layout_constraintStart_toStartOf="@+id/textViewCardNumberOne"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_favicon_copy_4_white" />
+                    app:srcCompat="@drawable/ic_favicon_copy_4_white"
+                    android:contentDescription="@string/cardlist_carrousel"/>
 
                 <TextView
                     android:id="@+id/textViewBankNameOne"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SMM"
+                    android:text="@string/cardlist_carrousel_default_bankname"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView7One"
                     app:layout_constraintStart_toEndOf="@+id/imageView7One"
@@ -212,7 +225,6 @@
             android:id="@+id/itemTwo"
             android:layout_width="@dimen/cardCarrouselWidth"
             android:layout_height="@dimen/cardCarrouselHeight"
-            android:scaleType="centerCrop"
             app:cardBackgroundColor="@color/design_default_color_error"
             app:cardCornerRadius="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -232,8 +244,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
-                    android:lineSpacingExtra="8sp"
-                    android:lineSpacingMultiplier="1"
                     android:text="@string/cardListHome_itemPrototypeNumber"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -255,12 +265,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="30dp"
                     android:layout_marginBottom="30dp"
-                    android:scaleType="center"
-                    android:scaleX="1.5"
-                    android:scaleY="1.5"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:srcCompat="@drawable/ic_mastercard_vector" />
+                    app:srcCompat="@drawable/ic_mastercard_vector"
+                    android:contentDescription="@string/cardlist_carrousel"/>
 
                 <ImageView
                     android:id="@+id/imageView6Two"
@@ -271,7 +279,8 @@
                     android:scaleY="1.5"
                     app:layout_constraintBottom_toTopOf="@+id/imageViewFranchise2"
                     app:layout_constraintStart_toStartOf="@+id/imageViewFranchise2"
-                    app:srcCompat="@drawable/ic_contactless_white" />
+                    app:srcCompat="@drawable/ic_contactless_white"
+                    android:contentDescription="@string/cardlist_carrousel"/>
 
                 <ImageView
                     android:id="@+id/imageView7Two"
@@ -281,13 +290,14 @@
                     android:scaleY="0.8"
                     app:layout_constraintStart_toStartOf="@+id/textViewCardNumberTwo"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_favicon_copy_4_white" />
+                    app:srcCompat="@drawable/ic_favicon_copy_4_white"
+                    android:contentDescription="@string/cardlist_carrousel"/>
 
                 <TextView
                     android:id="@+id/textViewBankNameTwo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SMM"
+                    android:text="@string/cardlist_carrousel_default_bankname"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView7Two"
                     app:layout_constraintStart_toEndOf="@+id/imageView7Two"
@@ -301,7 +311,6 @@
             android:layout_width="@dimen/cardCarrouselWidth"
             android:layout_height="@dimen/cardCarrouselHeight"
             android:layout_marginStart="16dp"
-            android:scaleType="centerCrop"
             app:cardBackgroundColor="@color/design_default_color_secondary"
             app:cardCornerRadius="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -319,8 +328,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
-                    android:lineSpacingExtra="8sp"
-                    android:lineSpacingMultiplier="1"
                     android:text="@string/cardListHome_itemPrototypeNumber"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -342,12 +349,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="30dp"
                     android:layout_marginBottom="30dp"
-                    android:scaleType="center"
                     android:scaleX="1.5"
                     android:scaleY="1.5"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:srcCompat="@drawable/ic_mastercard_vector" />
+                    app:srcCompat="@drawable/ic_mastercard_vector"
+                    android:contentDescription="@string/cardlist_carrousel"/>
 
                 <ImageView
                     android:id="@+id/imageView6Three"
@@ -358,7 +365,8 @@
                     android:scaleY="1.5"
                     app:layout_constraintBottom_toTopOf="@+id/imageViewFranchise3"
                     app:layout_constraintStart_toStartOf="@+id/imageViewFranchise3"
-                    app:srcCompat="@drawable/ic_contactless_white" />
+                    app:srcCompat="@drawable/ic_contactless_white"
+                    android:contentDescription="@string/cardlist_carrousel"/>
 
                 <ImageView
                     android:id="@+id/imageView7Three"
@@ -368,13 +376,14 @@
                     android:scaleY="0.8"
                     app:layout_constraintStart_toStartOf="@+id/textViewCardNumberThree"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_favicon_copy_4_white" />
+                    app:srcCompat="@drawable/ic_favicon_copy_4_white"
+                    android:contentDescription="@string/cardlist_carrousel"/>
 
                 <TextView
                     android:id="@+id/textViewBankNameThree"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SMM"
+                    android:text="@string/cardlist_carrousel_default_bankname"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView7Three"
                     app:layout_constraintStart_toEndOf="@+id/imageView7Three"
@@ -390,7 +399,6 @@
             android:layout_width="@dimen/cardCarrouselWidth"
             android:layout_height="@dimen/cardCarrouselHeight"
             android:layout_marginStart="16dp"
-            android:scaleType="centerCrop"
             app:cardBackgroundColor="@color/design_default_color_on_primary"
             app:cardCornerRadius="34dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -409,8 +417,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
-                    android:lineSpacingExtra="8sp"
-                    android:lineSpacingMultiplier="1"
                     android:text="@string/cardListHome_itemPrototypeNumber"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -432,12 +438,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="30dp"
                     android:layout_marginBottom="30dp"
-                    android:scaleType="center"
                     android:scaleX="1.5"
                     android:scaleY="1.5"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:srcCompat="@drawable/ic_mastercard_vector" />
+                    app:srcCompat="@drawable/ic_mastercard_vector"
+                    android:contentDescription="@string/cardlist_carrousel"/>
 
                 <ImageView
                     android:id="@+id/imageView6Four"
@@ -448,7 +454,8 @@
                     android:scaleY="1.5"
                     app:layout_constraintBottom_toTopOf="@+id/imageView5Four"
                     app:layout_constraintStart_toStartOf="@+id/imageView5Four"
-                    app:srcCompat="@drawable/ic_contactless_white" />
+                    app:srcCompat="@drawable/ic_contactless_white"
+                    android:contentDescription="@string/cardlist_carrousel"/>
 
                 <ImageView
                     android:id="@+id/imageView7Four"
@@ -458,13 +465,14 @@
                     android:scaleY="0.8"
                     app:layout_constraintStart_toStartOf="@+id/cardHomePrototypeNumberFour"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_favicon_copy_4_white" />
+                    app:srcCompat="@drawable/ic_favicon_copy_4_white"
+                    android:contentDescription="@string/cardlist_carrousel"/>
 
                 <TextView
                     android:id="@+id/textView20Four"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SMM"
+                    android:text="@string/cardlist_carrousel_default_bankname"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView7Four"
                     app:layout_constraintStart_toEndOf="@+id/imageView7Four"
@@ -498,9 +506,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/motionLayout"
+        app:layout_constraintBottom_toBottomOf="@+id/motion_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/motion_layout" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="46dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_baseline_settings_24"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
